@@ -19,8 +19,6 @@ public class GameManager : MonoBehaviour
     public GameObject[] checks;
     public Button itchButton;
 
-    [SerializeField] private AudioClip[] _audioClips;
-
     void Awake()
     {
         instance = this;
@@ -74,6 +72,16 @@ public class GameManager : MonoBehaviour
 
     // --------------------------------- AUDIO STUFF ----------------------------------------
     [SerializeField] private AudioSource uiAudioSource;
+    
+    /// <summary>
+    /// 0 - panel open
+    /// 1 - mouse click
+    /// 2 - mouse release
+    /// 3 - button pressed
+    /// </summary>
+    [SerializeField] private AudioClip[] _audioClips;
+
+
     public void PlayAudio(AudioClip clip)
     {
         //audioSource.clip = clip;
