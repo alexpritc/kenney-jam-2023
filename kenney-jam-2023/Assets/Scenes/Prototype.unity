@@ -4199,7 +4199,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &963158071
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5179,10 +5179,10 @@ RectTransform:
   - {fileID: 1615601014}
   m_Father: {fileID: 963158071}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 243.77005, y: 0}
+  m_SizeDelta: {x: 487.5401, y: 44.01389}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1198648727
 MonoBehaviour:
@@ -5530,8 +5530,12 @@ MonoBehaviour:
   - {fileID: 937657876}
   - {fileID: 1426191914}
   itchButton: {fileID: 1002637968}
-  _audioClips: []
   uiAudioSource: {fileID: 1297185823}
+  _audioClips:
+  - {fileID: 8300000, guid: 7a2ec237417faf841ae09e84db1acb4b, type: 3}
+  - {fileID: 8300000, guid: 2f8f6e502b3c1a644bed4d3518d6fbb4, type: 3}
+  - {fileID: 8300000, guid: dd092fc4a249fb1488df08f8cbcac6ec, type: 3}
+  - {fileID: 8300000, guid: a2825a08492736c479926ebe58d0f07f, type: 3}
 --- !u!82 &1297185823
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6846,47 +6850,7 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 22285426}
-    m_ColliderPaths:
-    - - X: 4125240576
-        Y: 2100000128
-      - X: 2925240576
-        Y: 2100000128
-      - X: 2925240576
-        Y: -2100000128
-      - X: 4125240576
-        Y: -2100000128
-  - m_Collider: {fileID: 1523949948}
-    m_ColliderPaths:
-    - - X: -2925240832
-        Y: 2100000128
-      - X: -4125240832
-        Y: 2100000128
-      - X: -4125240832
-        Y: -2100000128
-      - X: -2925240832
-        Y: -2100000128
-  - m_Collider: {fileID: 1904936650}
-    m_ColliderPaths:
-    - - X: 4200000256
-        Y: -1667593216
-      - X: -4200000256
-        Y: -1667593216
-      - X: -4200000256
-        Y: -2867593472
-      - X: 4200000256
-        Y: -2867593472
-  - m_Collider: {fileID: 450488304}
-    m_ColliderPaths:
-    - - X: 4200000256
-        Y: 2867593472
-      - X: -4200000256
-        Y: 2867593472
-      - X: -4200000256
-        Y: 1667593344
-      - X: 4200000256
-        Y: 1667593344
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 420, y: -286.75934}
@@ -9840,10 +9804,10 @@ RectTransform:
   - {fileID: 1424452900}
   m_Father: {fileID: 963158071}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 243.77005, y: -182.97998}
+  m_SizeDelta: {x: 487.5401, y: 277.9322}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1876697006
 MonoBehaviour:
@@ -10972,10 +10936,10 @@ RectTransform:
   - {fileID: 916924261}
   m_Father: {fileID: 963158071}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 243.77005, y: -321.94608}
+  m_SizeDelta: {x: 487.5401, y: 44.01389}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2066963948
 MonoBehaviour:
