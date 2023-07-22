@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -28,7 +29,7 @@ public class GameManager : MonoBehaviour
         isGravityOn = !isGravityOn;
         ChangeGravity(isGravityOn ? -9.81f : 0);
 
-        // reset velocity (wont work on rb added after Start)
+        // reset velocity
         if (!isGravityOn)
         {
             // yuck
