@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3484039958504574703}
   - component: {fileID: 6390540934479143148}
   - component: {fileID: 8859275600305290855}
+  - component: {fileID: 2010845619788434010}
   m_Layer: 5
   m_Name: Toggle
   m_TagString: Untagged
@@ -202,6 +203,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 133.05898, y: 22.115593}
   m_EdgeRadius: 0
+--- !u!114 &2010845619788434010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982055912153872764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5264303e023acc42a7aa3a2283b5002, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3063384345306651362
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,10 +500,10 @@ RectTransform:
   - {fileID: 1126450619394286361}
   m_Father: {fileID: 3885243623198821367}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 119.01, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 119.01, y: -11}
+  m_SizeDelta: {x: 0, y: 22}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &3022819562043380188
 CanvasRenderer:
