@@ -15,6 +15,7 @@ public class ButtonController : MonoBehaviour
     public void EnableGameObject(GameObject go)
     {
         go.SetActive(true);
+        GameManager.Instance.PlayAudio(0);
     }
 
     public void DisableGameObject(GameObject go)

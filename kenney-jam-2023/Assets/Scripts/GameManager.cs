@@ -61,10 +61,12 @@ public class GameManager : MonoBehaviour
 
     public void CheckPassword(TMP_InputField input)
     {
+        GameManager.Instance.PlayAudio(1);
+
         if (input.text.ToUpper() == "TURNIP")
         {
             // Enable itch button
-            ToggleButton(itchButton);
+            itchButton.interactable = true;
             checks[0].SetActive(false);
             checks[1].SetActive(true);
         }
@@ -75,17 +77,14 @@ public class GameManager : MonoBehaviour
     
     /// <summary>
     /// 0 - panel open
-    /// 1 - mouse click
+    /// 1 - mouse hover
     /// 2 - mouse release
     /// 3 - button pressed
     /// </summary>
-    [SerializeField] private AudioClip[] _audioClips;
-
-
-    public void PlayAudio(AudioClip clip)
+    [SerializeField] private AudioClip[] audioClips;
+    public void PlayAudio(int clip)
     {
-        //audioSource.clip = clip;
-        uiAudioSource.PlayOneShot(clip);
+        uiAudioSource.PlayOneShot(audioClips[clip]);
     }
 
     // for keeping track of it
