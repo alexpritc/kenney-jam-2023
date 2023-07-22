@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     public GameObject[] checks;
     public Button itchButton;
 
+    [SerializeField] private AudioClip[] _audioClips;
+
     void Awake()
     {
         instance = this;
@@ -31,6 +33,7 @@ public class GameManager : MonoBehaviour
     }
 
 
+    // --------------------------------- GAMEPLAY PUZZLE STUFF ----------------------------------------
     public void ToggleGravity()
     {
         isGravityOn = !isGravityOn;
@@ -67,5 +70,49 @@ public class GameManager : MonoBehaviour
             checks[0].SetActive(false);
             checks[1].SetActive(true);
         }
+    }
+
+    // --------------------------------- AUDIO STUFF ----------------------------------------
+    [SerializeField] private AudioSource uiAudioSource;
+    public void PlayAudio(AudioClip clip)
+    {
+        //audioSource.clip = clip;
+        uiAudioSource.PlayOneShot(clip);
+    }
+
+    // for keeping track of it
+    private float masterVol = 1f;
+    private float musicVol = 1f;
+    private float SFXVol = 1f;
+
+    public void UpdateVolumeSlider(string mixer, float vol)
+    {
+        switch (mixer)
+        {
+            case "Master":
+                masterVol = vol;
+                break;
+            case "Music":
+                musicVol = vol;
+                break;
+            case "SFX":
+                SFXVol = vol;
+                break;
+        }
+    }
+
+    public float GetVolume(string mixer)
+    {
+        switch (mixer)
+        {
+            case "Master":
+                return masterVol;
+            case "Music":
+                return musicVol;
+            case "SFX":
+                return SFXVol;
+        }
+
+        return 1f;
     }
 }
