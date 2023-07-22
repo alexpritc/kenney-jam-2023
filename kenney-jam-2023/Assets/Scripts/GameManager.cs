@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get { return instance; } }
 
     private bool isGravityOn = false;
+    public float gravity = -9.81f;
 
     Rigidbody2D[] allRigidBodies;
 
@@ -27,7 +29,7 @@ public class GameManager : MonoBehaviour
     public void ToggleGravity()
     {
         isGravityOn = !isGravityOn;
-        ChangeGravity(isGravityOn ? -9.81f : 0);
+        ChangeGravity(isGravityOn ? gravity : 0);
 
         // reset velocity
         if (!isGravityOn)
@@ -44,5 +46,10 @@ public class GameManager : MonoBehaviour
     public void ChangeGravity(float gravityScale)
     {
         Physics2D.gravity = new Vector3(0, gravityScale, 0);
+    }
+
+    public void ToggleButton(Button button)
+    {
+        button.interactable = !button.IsInteractable();
     }
 }
