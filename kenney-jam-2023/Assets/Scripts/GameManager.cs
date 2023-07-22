@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class GameManager : MonoBehaviour
     public float gravity = -9.81f;
 
     Rigidbody2D[] allRigidBodies;
+
+    // Spaghetti code, hack
+    public GameObject[] checks;
+    public Button itchButton;
 
     void Awake()
     {
@@ -51,5 +56,16 @@ public class GameManager : MonoBehaviour
     public void ToggleButton(Button button)
     {
         button.interactable = !button.IsInteractable();
+    }
+
+    public void CheckPassword(TMP_InputField input)
+    {
+        if (input.text.ToUpper() == "TURNIP")
+        {
+            // Enable itch button
+            ToggleButton(itchButton);
+            checks[0].SetActive(false);
+            checks[1].SetActive(true);
+        }
     }
 }
