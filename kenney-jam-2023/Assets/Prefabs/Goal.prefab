@@ -166,26 +166,25 @@ MonoBehaviour:
   text: {fileID: 3661715564053638309}
   comment: {fileID: 7114036660061153051}
   comments:
-  - The last twelve monkeys finished these puzzles way quicker than you.
-  - You're slow, ain't you?
-  - Some say UX is an important part of game design...
-  - You might need help. There's a help button for that.
-  - Tick tock tick tock tick tock tick tock
-  - Oh look, a snail just beat this game before you did.
-  - That's it, click all the buttons, everybody does.
-  - Can't find the button you're looking for? It's probably a myth.
-  - I hear this game isn't even real. Why are you even still trying?
-  - I'm snarky because I'm nervous about how you'll recieve my game, I'm a softy
-    really.
-  - My dog beat this thing quicker than you.
-  - Not the brightest are you.
-  - Some say they're still trying to beat this one.
-  - Just give up and rate me already!!!!! .....Positively. Please.
+  - You're doing a great job!
+  - This is the fastest anyone has done so far.
+  - I hope you're having a good time :)
+  - The day is lovely today, isn't it?
+  - Happy Jamming
+  - Look at you! What a cutiepie!!!!!
+  - That's it, click all the buttons! Good Job!
+  - Can't find the button you're looking for? Maybe there's help on the jam page.
+  - I bet the real game is even better than this.
+  - ' I''m nervous about how you''ll recieve my game, I''m a softy really.'
+  - My dog says hi.
+  - Don't give up!!!!!!
+  - Feel free to leave a generous rating ;)
+  - ^-^
   - :)
-  - I hope you're having a good day.
-  - I'm running out of things to say.
+  - I hear one of these comments gives you the answer.
+  - Happy Kenney Jam 2023!!!
   - Alex was here
-  - Look, the password is Turnip. Okay. TURNIP.
+  - Don't tell anyone but the password is "TURNIP". Shhh.
   - Oh no... the play button isn't enabled
 --- !u!1 &8367076169810545421
 GameObject:

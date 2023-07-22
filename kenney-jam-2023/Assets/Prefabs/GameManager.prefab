@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a80091819fcaea45b38bd41c90392ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayButton: {fileID: 0}
   gravity: -19.62
   checks:
   - {fileID: 0}
@@ -56,6 +57,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2f8f6e502b3c1a644bed4d3518d6fbb4, type: 3}
   - {fileID: 8300000, guid: dd092fc4a249fb1488df08f8cbcac6ec, type: 3}
   - {fileID: 8300000, guid: a2825a08492736c479926ebe58d0f07f, type: 3}
+  - {fileID: 8300000, guid: 15eda1f842b7e474fbc3eb1da0717527, type: 3}
 --- !u!82 &1517709145032716024
 AudioSource:
   m_ObjectHideFlags: 0

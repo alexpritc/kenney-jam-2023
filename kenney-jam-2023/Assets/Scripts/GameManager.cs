@@ -103,6 +103,7 @@ public class GameManager : MonoBehaviour
     private void ActivatePlayButton()
     {
         PlayButton.interactable = true;
+        PlayAudio(4);
     }
 
     // --------------------------------- AUDIO STUFF ----------------------------------------
@@ -113,6 +114,7 @@ public class GameManager : MonoBehaviour
     /// 1 - mouse hover
     /// 2 - mouse release
     /// 3 - button pressed
+    /// 4 - start button unlocked
     /// </summary>
     [SerializeField] private AudioClip[] audioClips;
     public void PlayAudio(int clip)
@@ -153,6 +155,6 @@ public class GameManager : MonoBehaviour
                 return SFXVol;
         }
 
-        return 1f;
+        return 0f;
     }
 }
