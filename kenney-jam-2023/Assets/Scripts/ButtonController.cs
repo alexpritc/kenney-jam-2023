@@ -11,16 +11,6 @@ public class ButtonController : MonoBehaviour
 
     public GameObject menu;
 
-    public void LoadScene(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
-    }
-
-    public void ToggleEffect(string effectName)
-    {
-        GameManager.Instance.ToggleEffect(effectName);
-    }
-
     public void EnableGameObject(GameObject go)
     {
         go.SetActive(true);

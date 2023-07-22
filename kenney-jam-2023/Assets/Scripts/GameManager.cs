@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     private bool isGravityOn = false;
 
+    Rigidbody2D[] allRigidBodies;
+
     void Awake()
     {
         instance = this;
@@ -20,15 +22,22 @@ public class GameManager : MonoBehaviour
         ChangeGravity(0);
     }
 
-    public void ToggleEffect(string effectName)
-    {
-
-    }
 
     public void ToggleGravity()
     {
         isGravityOn = !isGravityOn;
         ChangeGravity(isGravityOn ? -9.81f : 0);
+
+        // reset velocity (wont work on rb added after Start)
+        if (!isGravityOn)
+        {
+            // yuck
+            allRigidBodies = (Rigidbody2D[])FindObjectsOfType(typeof(Rigidbody2D));
+            foreach (var rb in allRigidBodies)
+            {
+                rb.velocity = Vector3.zero;
+            }
+        }
     }
 
     public void ChangeGravity(float gravityScale)
