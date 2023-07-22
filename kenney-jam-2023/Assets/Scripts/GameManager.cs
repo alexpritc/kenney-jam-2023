@@ -1,14 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
     public static GameManager Instance { get { return instance; } }
+
+    public Button PlayButton;
 
     private bool isGravityOn = false;
     public float gravity = -9.81f;
@@ -19,6 +22,8 @@ public class GameManager : MonoBehaviour
     public GameObject[] checks;
     public Button itchButton;
 
+    private string currentPasswordAttempt = "";
+
     void Awake()
     {
         instance = this;
@@ -28,6 +33,11 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         ChangeGravity(0);
+    }
+
+    private void Update()
+    {
+        KeyLogger();
     }
 
 
@@ -72,9 +82,32 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void KeyLogger()
+    {
+        if (currentPasswordAttempt.Length >= 8)
+        {
+            currentPasswordAttempt = currentPasswordAttempt.Remove(0, 1);
+        }
+
+        foreach (char c in Input.inputString)
+        {
+            currentPasswordAttempt += c;
+        }
+
+        if (string.Equals(currentPasswordAttempt, "kennyjam", StringComparison.OrdinalIgnoreCase))
+        {
+            ActivatePlayButton();
+        }
+    }
+
+    private void ActivatePlayButton()
+    {
+        PlayButton.interactable = true;
+    }
+
     // --------------------------------- AUDIO STUFF ----------------------------------------
     [SerializeField] private AudioSource uiAudioSource;
-    
+
     /// <summary>
     /// 0 - panel open
     /// 1 - mouse hover
