@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
 
     public void KeyLogger()
     {
-        if (currentPasswordAttempt.Length >= 8)
+        if (currentPasswordAttempt.Length >= 9)
         {
             currentPasswordAttempt = currentPasswordAttempt.Remove(0, 1);
         }
@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
             currentPasswordAttempt += c;
         }
 
-        if (string.Equals(currentPasswordAttempt, "kennyjam", StringComparison.OrdinalIgnoreCase))
+        if (string.Equals(currentPasswordAttempt, "kenneyjam", StringComparison.OrdinalIgnoreCase))
         {
             ActivatePlayButton();
         }
