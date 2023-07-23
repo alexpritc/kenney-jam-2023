@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour
 
     private string currentPasswordAttempt = "";
 
+    bool hasWon;
+    public GameObject winMessage;
+
     void Awake()
     {
         instance = this;
@@ -38,10 +41,23 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         KeyLogger();
+
+        if (hasWon)
+        {
+            if (winMessage.GetComponent<CanvasGroup>().alpha < 1.0f)
+            {
+                winMessage.GetComponent<CanvasGroup>().alpha += Time.deltaTime;
+            }
+        }
     }
 
 
     // --------------------------------- GAMEPLAY PUZZLE STUFF ----------------------------------------
+    public void Winner()
+    {
+        hasWon = true;
+    }
+
     public void ToggleGravity()
     {
         isGravityOn = !isGravityOn;
